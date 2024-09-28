@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aecf6d023c60216408402a5b8336d87d, type: 3}
+  m_Name: MultiShot
+  m_EditorClassIdentifier: 
+  _damage: 10
+  _fireRate: 5
+  _projectileSpeed: 5
+  _projectileLifetime: 4
+  _projectilePrefab: {fileID: 3086312302020459823, guid: 9529113e4d9695e47837d20a5341cd33, type: 3}
+  _projectileCount: 7
+  _spreadAngle: 360
