@@ -38,9 +38,10 @@ public class MultiShot : WeaponStrategy
   
             projectileComponent.SetDirection(projectileMoveDirection);
             projectileComponent.SetSpeed(_projectileSpeed);
+            projectileComponent.SetDamage(_damage);
 
             //ResetParent(projectile);
-   
+
             Destroy(projectile, _projectileLifetime);
             angle += angleStep;
         }

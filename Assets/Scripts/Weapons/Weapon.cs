@@ -18,4 +18,9 @@ public class Weapon : MonoBehaviour
         _weaponStrategy = weaponStrategy;
         _weaponStrategy.Initialize();
     }
+
+    public WeaponStrategy GetWeaponStrategy()
+    {
+        return _weaponStrategy;
+    }
 }

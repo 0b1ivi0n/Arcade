@@ -18,12 +18,12 @@ public class FastShipAttack : MonoBehaviour
     }
     private void Update()
     {
-        float distanceToPlayer = Vector2.Distance(transform.position, _player.position);
+        //float distanceToPlayer = Vector2.Distance(transform.position, _player.position);
 
-        if (distanceToPlayer < _explosionDistance)
-        {
-            DoExplosion();
-        }
+        //if (distanceToPlayer < _explosionDistance)
+        //{
+        //    DoExplosion();
+        //}
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

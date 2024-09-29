@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Background
   - FxTemporaire
+  - ImageWeaponPWUP
+  - ImageShieldPWUP
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - PlayProjectile
   - EnemyProjectile
   - Asteroid
-  - 
+  - PoweUp
   - 
   - 
   - 

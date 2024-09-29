@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShipWeapon : Weapon
+public class ShipWeapon : Weapon
 {
     private float _fireTimer;
 

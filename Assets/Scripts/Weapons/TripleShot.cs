@@ -1,24 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Jobs;
 
 [CreateAssetMenu(fileName = "TripleShot", menuName = "WeaponStrategy/TripleShot")]
 public class TripleShot : WeaponStrategy
 {
-    [SerializeField] private float _spreadAngle = 15f;
 
+    [SerializeField] private float _offset = 0.5f;
     public override void Fire(Transform firePoint)
     {
-        for (int i = 0; i < 3; i++)
-        {
-            var projectile = Instantiate(_projectilePrefab, firePoint.position, firePoint.rotation);
-            projectile.transform.SetParent(firePoint);
-            projectile.transform.Rotate(0f, _spreadAngle * (i - 1), 0f);
-
-            var projectileComponent = projectile.GetComponent<Projectile>();
-            projectileComponent.SetSpeed(_projectileSpeed);
-
-            Destroy(projectile, _projectileLifetime);
-        }
+        FireProjectile(firePoint.position);
+        FireProjectile(firePoint.position + new Vector3(-_offset, 0, 0));
+        FireProjectile(firePoint.position + new Vector3(_offset, 0, 0));
     }
+    private void FireProjectile(Vector3 position)
+    {
+        var projectile = Instantiate(_projectilePrefab, position, Quaternion.identity);
+        var projectileComponent = projectile.GetComponent<Projectile>();
+
+        projectileComponent.SetSpeed(_projectileSpeed);
+        projectileComponent.SetDirection(Vector2.down);  
+        projectileComponent.SetDamage(_damage);
+
+        Destroy(projectile, _projectileLifetime);
+    }
+
 }
