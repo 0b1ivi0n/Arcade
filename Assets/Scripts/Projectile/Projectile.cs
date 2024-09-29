@@ -28,17 +28,8 @@ public class Projectile : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        //if (_hitPrefab != null)
-        //{
-        //    ContactPoint contact = collision.contacts[0];
-        //    var hitVFX = Instantiate(_hitPrefab, contact.point, Quaternion.identity);
-
-        //    DestroyParticleSystem(hitVFX);
-        //}
-
-        Debug.Log(collision.gameObject.name);
         var healthSystem = collision.gameObject.GetComponent<HealthSystem>();
-        Debug.Log(healthSystem);
+
         if (healthSystem != null)
         {
             bool died = healthSystem.TakeDamage(_damage);

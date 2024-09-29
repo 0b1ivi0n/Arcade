@@ -7,11 +7,9 @@ public class HealthSystem: MonoBehaviour
     protected int _health;
     public void SetHealth(int health) => _health = health;
 
-    public bool TakeDamage(int amount)
+    public virtual bool TakeDamage(int amount)
     {
-        Debug.Log(amount);
         _health -= amount;
-        Debug.Log(_health);
         if (_health <= 0)
         {
             Die();
@@ -20,7 +18,7 @@ public class HealthSystem: MonoBehaviour
         return false;
     }
 
-    private void Die()
+    protected virtual void Die()
     {
         Destroy(gameObject);
     }

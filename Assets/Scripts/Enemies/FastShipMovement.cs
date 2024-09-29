@@ -12,5 +12,4 @@ public class FastShipMovement : ShipMovement
         _speed = Random.Range(_speed, _maxSpeed);
     }
 
-
 }
