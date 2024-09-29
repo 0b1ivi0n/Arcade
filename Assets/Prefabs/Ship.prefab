@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 231711209384934541}
   - component: {fileID: 2083499176035578541}
   - component: {fileID: 8094758733544986154}
+  - component: {fileID: -1361999742086904142}
   m_Layer: 8
   m_Name: Ship
   m_TagString: Untagged
@@ -234,3 +235,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 097dc9772496e3147b84fee70895cf71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-1361999742086904142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6432663994771474864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc3ce100540173c4eb749a93932beff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _explosionEffect: {fileID: 100014, guid: a57a6829db3568c4d9bdc37e9e63c017, type: 3}
+  _damage: 10
+  _player: {fileID: 0}
+  _explosionDistance: 2

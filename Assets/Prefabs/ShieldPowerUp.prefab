@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2697241486485523815}
   - component: {fileID: 1341711266298674654}
   - component: {fileID: 7770482237520274884}
+  - component: {fileID: 6850704918665094302}
   m_Layer: 12
   m_Name: ShieldPowerUp
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7808243040822807888}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 16.48, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -143,9 +144,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7448d92aa038cf14ab06c87c720b7d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _speedScrolling: 1
   _moveDistance: 0.5
   _moveDuration: 1
   _scaleDuration: 0.5
   _scaleFactor: 1.2
   _duration: 15
   uIPowerUp: {fileID: 0}
+--- !u!114 &6850704918665094302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7808243040822807888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc3ce100540173c4eb749a93932beff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _explosionEffect: {fileID: 100014, guid: a57a6829db3568c4d9bdc37e9e63c017, type: 3}
+  _damage: 0
+  _player: {fileID: 0}
+  _explosionDistance: 2

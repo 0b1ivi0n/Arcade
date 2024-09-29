@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1159392988184940271}
   - component: {fileID: 8448986501240594037}
   - component: {fileID: 7591708495673061781}
+  - component: {fileID: 7496965520675465937}
   m_Layer: 10
   m_Name: RotorLaser
   m_TagString: Untagged
@@ -163,3 +164,19 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.08, y: 0.28}
   m_Direction: 0
+--- !u!114 &7496965520675465937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3086312302020459823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc3ce100540173c4eb749a93932beff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _explosionEffect: {fileID: 100014, guid: a57a6829db3568c4d9bdc37e9e63c017, type: 3}
+  _damage: 0
+  _player: {fileID: 0}
+  _explosionDistance: 2

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -706249353478838157}
   - component: {fileID: 3367168761579636426}
   - component: {fileID: 4096531637254653194}
+  - component: {fileID: -3116762162836318212}
   m_Layer: 8
   m_Name: Rotor
   m_TagString: Untagged
@@ -204,6 +205,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-3116762162836318212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851033314712818973}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc3ce100540173c4eb749a93932beff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _explosionEffect: {fileID: 100014, guid: a57a6829db3568c4d9bdc37e9e63c017, type: 3}
+  _damage: 10
+  _player: {fileID: 0}
+  _explosionDistance: 2
 --- !u!1 &4433465470367673745
 GameObject:
   m_ObjectHideFlags: 0

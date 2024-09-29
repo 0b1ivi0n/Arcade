@@ -5,11 +5,13 @@ using UnityEngine;
 
 public abstract class PowerUp : MonoBehaviour
 {
+    [SerializeField] private float _lifetime = 20f;
+    [SerializeField] private Transform _targetPosition;
+
     [SerializeField] private float _moveDistance = 0.5f;  
     [SerializeField] private float _moveDuration = 1f;  
     [SerializeField] private float _scaleDuration = 0.5f; 
     [SerializeField] private float _scaleFactor = 1.2f;
-
     protected GameObject _player;
     protected virtual void Start()
     {
@@ -17,11 +19,19 @@ public abstract class PowerUp : MonoBehaviour
         StartFloatingAnimation();
     }
 
+    private void Update()
+    {
+        //transform.position += new Vector3(0, -_speedScrolling * Time.deltaTime, 0);
+    }
     private void StartFloatingAnimation()
     {
-        transform.DOMoveY(transform.position.y + _moveDistance, _moveDuration)
-            .SetLoops(-1, LoopType.Yoyo)  
-            .SetEase(Ease.InOutSine);     
+        //transform.DOMoveY(transform.position.y + _moveDistance, _moveDuration)
+        //    .SetLoops(-1, LoopType.Yoyo)
+        //    .SetEase(Ease.InOutSine);
+        //Vector3 targetPosition = new Vector3(transform.position.x, _targetPosition.position.y, transform.position.z);
+        Vector3 targetPosition = new Vector3(transform.position.x, -5, transform.position.z);
+        transform.DOMove(targetPosition, _lifetime)
+           .SetEase(Ease.Linear);
 
         transform.DOScale(Vector3.one * _scaleFactor, _scaleDuration)
             .SetLoops(-1, LoopType.Yoyo) 
