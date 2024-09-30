@@ -32,4 +32,9 @@ public class PlayerHealthSystem : HealthSystem {
     {
         _isInvincibility = value;
     }
+
+    protected void Die()
+    {
+        Destroy(gameObject);
+    }
 }

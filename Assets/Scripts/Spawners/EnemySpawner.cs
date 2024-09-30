@@ -37,7 +37,14 @@ public abstract class EnemySpawner : MonoBehaviour
     }
     protected abstract void SpawnEnemy();
     protected abstract GameObject Preload();
-
+    protected void HandleEnemyDie(GameObject enemy)
+    {
+        _pool.Return(enemy);
+        enemiesSpawned--;
+        var healthSystem = enemy.GetComponent<HealthSystem>();
+        healthSystem.OnDie -= HandleEnemyDie;
+        healthSystem.ResetHealth();
+    }
     //protected abstract void SpawnEnemy()
     //{
     //    //EnemyType enemyType = enemyTypes[Random.Range(0, enemyTypes.Count)];

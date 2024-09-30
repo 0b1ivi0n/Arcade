@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,8 +6,17 @@ using UnityEngine;
 public class HealthSystem: MonoBehaviour
 {
     protected int _health;
-    public void SetHealth(int health) => _health = health;
+    protected int _healthInitial;
 
+    public event Action<GameObject> OnDie;
+
+    public void SetHealth(int health) 
+    {
+        _health = health;
+        _healthInitial = _health;
+    }
+
+    public void ResetHealth() => _health = _healthInitial;
     public virtual bool TakeDamage(int amount)
     {
         _health -= amount;
@@ -20,7 +30,8 @@ public class HealthSystem: MonoBehaviour
 
     protected virtual void Die()
     {
-        Destroy(gameObject);
+        //Destroy(gameObject);
+        OnDie?.Invoke(gameObject);
     }
 
 }

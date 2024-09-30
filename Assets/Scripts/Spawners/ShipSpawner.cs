@@ -15,6 +15,9 @@ public class ShipSpawner : EnemySpawner
         var newPosition = new Vector3(positionX, positionY, positionZ);
         enemy.transform.position = newPosition;
 
+        var healthSystem = enemy.GetComponent<HealthSystem>();
+        healthSystem.OnDie += HandleEnemyDie;
+
         enemiesSpawned++;
     }
 

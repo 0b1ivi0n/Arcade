@@ -18,6 +18,10 @@ public class RotorSpawner : EnemySpawner
         SplineContainer spline = splines[Random.Range(0, splines.Count)];
         enemy.GetComponent<SplineAnimate>().Restart(true);
         enemy.transform.position = (Vector3)spline.EvaluatePosition(0f);
+
+        var healthSystem = enemy.GetComponent<HealthSystem>();
+        healthSystem.OnDie += HandleEnemyDie;
+
         enemiesSpawned++;
     }
 
