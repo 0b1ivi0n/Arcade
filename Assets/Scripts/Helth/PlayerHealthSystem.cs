@@ -7,6 +7,7 @@ public class PlayerHealthSystem : HealthSystem {
 
     public event Action<int> OnHealthChanged;
     private bool _isInvincibility;
+    [SerializeField] GameManager _gameManager;
     public void AddHealth(int health)
     {
         _health += health;
@@ -36,5 +37,6 @@ public class PlayerHealthSystem : HealthSystem {
     protected void Die()
     {
         Destroy(gameObject);
+        _gameManager.GameOver();
     }
 }

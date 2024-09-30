@@ -9,6 +9,7 @@ TagManager:
   - ImageWeaponPWUP
   - ImageShieldPWUP
   - AudioManager
+  - Score
   layers:
   - Default
   - TransparentFX

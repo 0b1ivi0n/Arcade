@@ -45,32 +45,5 @@ public abstract class EnemySpawner : MonoBehaviour
         healthSystem.OnDie -= HandleEnemyDie;
         healthSystem.ResetHealth();
     }
-    //protected abstract void SpawnEnemy()
-    //{
-    //    //EnemyType enemyType = enemyTypes[Random.Range(0, enemyTypes.Count)];
-    //    //SplineContainer spline = splines[Random.Range(0, splines.Count)];
 
-    //    // do pool
-    //    //enemyFactory.CreateEnemy(enemyType, spline);
-    //    var enemy = _pool.Get();
-    //    SplineContainer spline = splines[Random.Range(0, splines.Count)];
-    //    enemy.GetComponent<SplineAnimate>().Restart(true);
-    //    enemy.transform.position = (Vector3)spline.EvaluatePosition(0f);
-    //    enemiesSpawned++;
-    //    //StartCoroutine(Test(enemy));
-    //}
-
-    ////IEnumerator Test(GameObject enemy)
-    ////{
-    ////    yield return new WaitForSeconds(5f);
-    ////    _pool.Return(enemy);
-    ////    enemiesSpawned--;
-    ////}
-
-    //protected abstract GameObject Preload()
-    //{
-    //    EnemyType enemyType = enemyTypes[Random.Range(0, enemyTypes.Count)];
-    //    SplineContainer spline = splines[Random.Range(0, splines.Count)];
-    //    return enemyFactory.CreateEnemy(enemyType, spline);
-    //}
 }

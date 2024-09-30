@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4026113123253409916}
   - component: {fileID: 9051951957297479081}
   - component: {fileID: 4652007033424167658}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PowerUpHealth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,7 +143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb7291f6f42e66d47803b48c1b39028a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedScrolling: 1
+  _lifetime: 20
+  _targetPosition: {fileID: 0}
   _moveDistance: 0.5
   _moveDuration: 1
   _scaleDuration: 0.5

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9138958659625380645}
   - component: {fileID: 1787495421247125264}
   - component: {fileID: 3155822720339492884}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: PowerUpWeapon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,12 +98,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b189f3cee87645347978f52d8ae59d63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedScrolling: 1
+  _lifetime: 20
+  _targetPosition: {fileID: 0}
   _moveDistance: 0.5
   _moveDuration: 1
   _scaleDuration: 0.5
   _scaleFactor: 1.2
-  _duration: 8
+  _duration: 12
   _weaponStrategy: {fileID: 11400000, guid: 978a13d0206fa0047a51dd146cf110f0, type: 2}
   uIPowerUp: {fileID: 0}
 --- !u!61 &3155822720339492884

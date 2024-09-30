@@ -144,12 +144,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7448d92aa038cf14ab06c87c720b7d42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedScrolling: 1
+  _lifetime: 20
+  _targetPosition: {fileID: 0}
   _moveDistance: 0.5
   _moveDuration: 1
   _scaleDuration: 0.5
   _scaleFactor: 1.2
-  _duration: 15
+  _duration: 10
   uIPowerUp: {fileID: 0}
 --- !u!114 &6850704918665094302
 MonoBehaviour:
