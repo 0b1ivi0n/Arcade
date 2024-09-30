@@ -17,7 +17,6 @@ public class ShipSpawner : EnemySpawner
 
         var healthSystem = enemy.GetComponent<HealthSystem>();
         healthSystem.OnDie += HandleEnemyDie;
-
         enemiesSpawned++;
     }
 

@@ -8,7 +8,7 @@ public class Weapon : MonoBehaviour
     [SerializeField] protected Transform _firePoint;
     [SerializeField] protected LayerMask _layer;
 
-    protected void Start()
+    protected virtual void Start()
     {
         _weaponStrategy.Initialize();
     }

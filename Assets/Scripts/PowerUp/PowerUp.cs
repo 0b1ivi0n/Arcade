@@ -13,8 +13,11 @@ public abstract class PowerUp : MonoBehaviour
     [SerializeField] private float _scaleDuration = 0.5f; 
     [SerializeField] private float _scaleFactor = 1.2f;
     protected GameObject _player;
+    protected AudioManager _audioManager;
+
     protected virtual void Start()
     {
+        _audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
         _player = GameObject.FindGameObjectWithTag("Player");
         StartFloatingAnimation();
     }
@@ -47,7 +50,10 @@ public abstract class PowerUp : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
+        {
+            _audioManager.PlaySFX(_audioManager.PickItem);
             ApplyPowerUp();
+        }
     }
 
     protected void TurnOffVisual()

@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class MainMenuController : MonoBehaviour
 {
     [SerializeField] private Button _onPlay;
+    [SerializeField] private Button _quit;
 
     private void Start()
     {
         _onPlay.onClick.AddListener(OnPlayClick);
+        _quit.onClick.AddListener( () => Application.Quit());
     }
 
     public void OnPlayClick()

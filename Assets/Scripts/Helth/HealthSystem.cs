@@ -10,6 +10,12 @@ public class HealthSystem: MonoBehaviour
 
     public event Action<GameObject> OnDie;
 
+    [SerializeField] protected AudioManager _audioManager;
+
+    protected void Start()
+    {
+        _audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+    }
     public void SetHealth(int health) 
     {
         _health = health;
@@ -32,6 +38,7 @@ public class HealthSystem: MonoBehaviour
     {
         //Destroy(gameObject);
         OnDie?.Invoke(gameObject);
+        _audioManager.PlaySFX(_audioManager.Death);
     }
 
 }
