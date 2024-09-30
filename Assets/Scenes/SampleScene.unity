@@ -6315,6 +6315,10 @@ PrefabInstance:
       propertyPath: _weaponStrategy
       value: 
       objectReference: {fileID: 11400000, guid: 271941a5c7ba16f4badea928f63683cf, type: 2}
+    - target: {fileID: 1628208792917012519, guid: 635cb55b5c9709649a21c7066e2c92af, type: 3}
+      propertyPath: tiltSensitivity
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 3876138175689952523, guid: 635cb55b5c9709649a21c7066e2c92af, type: 3}
       propertyPath: _gameManager
       value: 
